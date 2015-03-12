@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#
+# Concatenates and prints compressed files.
+#
+# Syntax: allcat <file> ...
+#
+# Adapted from https://github.com/cederberg/simple-admin/blob/master/bin/simple-zcat
+
+# Set caution flags
+set -o nounset
+set -o errtrace
+set -o errexit
+set -o pipefail
+
+# Process command-line arguments
+while [ "${1:-}" != "" ] ; do
+    FILE=$1
+    EXT=`echo $FILE | awk -F . '{print $NF}'`
+    if [ "$EXT" == "bz2" ] ; then
+        bzcat $FILE
+    elif [ "$EXT" == "gz" ] ; then
+        zcat $FILE
+    elif [ "$EXT" == "lzma" ] ; then
+        lzcat $FILE
+    elif [ "$EXT" == "xz" ] ; then
+        xzcat $FILE
+    else
+        cat $FILE
+    fi
+    shift
+done
