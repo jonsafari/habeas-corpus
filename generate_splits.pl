@@ -48,13 +48,16 @@ open ( DEV,   ">", "${basename}.dev_gold" );
 my $counter;
 while (<>) {
 	$stats{'total'}++;
-	my $trimmed = $_;
-	$trimmed =~ s/^ +//g;
-	$trimmed =~ s/ +$//g;
+	my $length = 0;
 
-	## Find out number of words in sentence
-	my $length = scalar(split /\s+/, $trimmed);
-	#print "length: $length; $_";
+	## Find out number of words in sentence, if we'll need it
+	if ($min_length or $max_length) {
+		my $trimmed = $_;
+		$trimmed =~ s/^ +//g;
+		$trimmed =~ s/ +$//g;
+		$length = scalar(split /\s+/, $trimmed);
+		#print "length: $length; $_";
+	}
 
 	## Input is either too short or too long; discard
 	if ($min_length and $length < $min_length) {
@@ -68,19 +71,19 @@ while (<>) {
 
 
     if ($counter == $n) {
-	print TEST $_;
-	$stats{'test'}++;
-	$counter++;
+		print TEST $_;
+		$stats{'test'}++;
+		$counter++;
     }
     elsif ($counter == $n + 1) {
-	print DEV $_;
-	$stats{'dev'}++;
-	$counter = 0;
+		print DEV $_;
+		$stats{'dev'}++;
+		$counter = 0;
     }
     else {
-	print TRAIN $_;
-	$stats{'train'}++;
-	$counter++;
+		print TRAIN $_;
+		$stats{'train'}++;
+		$counter++;
     }
 }
 
