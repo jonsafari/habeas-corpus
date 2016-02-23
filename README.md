@@ -4,7 +4,7 @@ Many of these scripts have a command-line argument <tt> --help </tt> for usage i
 Most of these scripts take their input from [stdin][], and output text to [stdout][], so the Unix command-line usage for many of these scripts is: <pre>./myscript.sh < input.txt > output.txt</pre>
 Or you can [pipe][] these commands with other commands.
 
-* <a href="allcat">allcat</a> - Works like <a href="https://en.wikipedia.org/wiki/Cat_(Unix)"><tt>cat</tt></a> regardless of whether the file is plaintext, <a href="https://en.wikipedia.org/wiki/Gzip">.gz</a>, <a href="https://en.wikipedia.org/wiki/Bzip2">.bz2</a>, <a href="https://en.wikipedia.org/wiki/Lzma">.lzma</a>, or <a href="https://en.wikipedia.org/wiki/Xz">.xz</a> (best)
+* <a href="allcat">allcat</a> - Works like <a href="https://en.wikipedia.org/wiki/Cat_(Unix)">`cat`</a> regardless of whether the file is plaintext, <a href="https://en.wikipedia.org/wiki/Gzip">.gz</a>, <a href="https://en.wikipedia.org/wiki/Bzip2">.bz2</a>, <a href="https://en.wikipedia.org/wiki/Lzma">.lzma</a>, or <a href="https://en.wikipedia.org/wiki/Xz">.xz</a> (best)
 * <a href="buckwalter2unicode.pl">buckwalter2unicode.pl</a> - Converts from <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration">Buckwalter transliteration</a> to UTF-8 native Arabic script
 * <a href="char_freq.sh">char_freq.sh</a> - Tabulates the frequency of characters in a text
 * <a href="corpus_get.sh">corpus_get.sh</a> - Builds a corpus from a remote website, recursively downloading all webpages
@@ -25,14 +25,15 @@ Or you can [pipe][] these commands with other commands.
 * <a href="subcorpora.pl">subcorpora.pl</a> - Builds subcorpora from a whole corpus, increasing in size exponentially
 * <a href="https://github.com/jonsafari/tok-tok">Tok-tok</a> - General tokenizer, suitable for many languages
 * <a href="uppercase.pl">uppercase.pl</a> - Uppercases all texts.  Works on almost all <a href="https://en.wikipedia.org/wiki/Letter_case">bicameral</a> orthographies
-* <a href="win1256_2_roman.tcl">win1256_2_roman.tcl</a> - Convert Persian Win-1256 text to transliteration.  Superseded by <a href="http://sourceforge.net/projects/perstem/">Perstem</a> with the arguments <tt> --form untouched -i cp1256 -o translit</tt>
+* <a href="vocab_filter.py">vocab_filter.py</a> - Replaces infrequent tokens with `<unk>`
+* <a href="win1256_2_roman.tcl">win1256_2_roman.tcl</a> - Convert Persian Win-1256 text to transliteration.  Superseded by <a href="http://sourceforge.net/projects/perstem/">Perstem</a> with the arguments ` --form untouched -i cp1256 -o translit`
 
 ## Other Useful Commands
 * <a href="https://en.wikipedia.org/wiki/Grep">grep</a> - Search for a pattern in text.  Learn <a href="https://www.gnu.org/software/grep/manual/grep.html#Command_002dline-Options">all</a> of the command-line arguments, especially -r, -i, -c, -e, -v, -o, -w
-* <a href="https://en.wikipedia.org/wiki/Shuf">shuf</a> - Randomizes the lines of the input.  For reproducible pseudo-randomization, try <tt>--random-source=input.txt</tt>
-* <a href="https://en.wikipedia.org/wiki/Sort_(Unix)">sort</a> - Sorts the lines of the input.  For large corpora, use <tt>LANG=C sort --buffer-size=4000M --temporary-directory=./</tt>
+* <a href="https://en.wikipedia.org/wiki/Shuf">shuf</a> - Randomizes the lines of the input.  For reproducible pseudo-randomization, try `--random-source=input.txt`
+* <a href="https://en.wikipedia.org/wiki/Sort_(Unix)">sort</a> - Sorts the lines of the input.  For large corpora, use `LANG=C sort --buffer-size=4000M --temporary-directory=./`
 * <a href="https://en.wikipedia.org/wiki/Tac_(Unix)">tac</a> - Reverses line-order of the input
-* <a href="https://en.wikipedia.org/wiki/Wc_(Unix)">wc</a> - Counts number of lines, words (tokens), and characters.  The argument <tt>--max-line-length</tt> is also useful.
+* <a href="https://en.wikipedia.org/wiki/Wc_(Unix)">wc</a> - Counts number of lines, words (tokens), and characters.  The argument `--max-line-length` is also useful.
 
 ## Other Useful Corpus Tools
 * [Corpus.tools](http://corpus.tools)
