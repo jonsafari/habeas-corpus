@@ -34,6 +34,11 @@ Or you can [pipe][] these commands with other commands.
 * <a href="https://en.wikipedia.org/wiki/Tac_(Unix)">tac</a> - Reverses line-order of the input
 * <a href="https://en.wikipedia.org/wiki/Wc_(Unix)">wc</a> - Counts number of lines, words (tokens), and characters.  The argument <tt>--max-line-length</tt> is also useful.
 
+## Other Useful Corpus Tools
+* [Corpus.tools](http://corpus.tools)
+* [Preprocess](https://github.com/kpu/preprocess)
+
+
 [pipe]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
 [stdin]: https://en.wikipedia.org/wiki/Standard_streams#Standard_input_.28stdin.29
 [stdout]: https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29
