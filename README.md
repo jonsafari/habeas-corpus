@@ -13,8 +13,7 @@ Or you can [pipe][] these commands with other commands.
 * [generate_splits.pl](generate_splits.pl) - Generates train/dev/test splits from a whole corpus.  Every <i>n</i> lines goes to the training set, then one to the development set, then one to the test set
 * [get_vocab.sh](get_vocab.sh) - Lists the vocabulary (set of unique words) from a text corpus
 * [lowercase.pl](lowercase.pl) - Lowercases all texts.  Works on almost all [bicameral] orthographies
-* [mediawiki2text.sh](mediawiki2text.sh) - Converts [MediaWiki] [dumps] to text corpus (imperfect)
-* [mediawiki_dict.sh](mediawiki_dict.sh) - Converts MediaWiki dumps to bilingual dictionary.  You should use the wikidump from the smaller language
+* [mediawiki_dict.sh](mediawiki_dict.sh) - Converts [MediaWiki] [dumps] to bilingual dictionary.  You should use the wikidump from the smaller language
 * [par_map.sh](par_map.sh) - Parallel Map a command for either a single file or multiple files (i.e. parallelize a command)
 * [penn2conll.sh](penn2conll.sh) - Converts [Penn treebank format] to POS-tagged [CoNLL-X format]
 * [penn2plain.pl](penn2plain.pl) - Converts Penn treebank format to plaintext
@@ -26,7 +25,6 @@ Or you can [pipe][] these commands with other commands.
 * [Tok-tok](https://github.com/jonsafari/tok-tok) - General tokenizer, suitable for many languages
 * [uppercase.pl](uppercase.pl) - Uppercases all texts.  Works on almost all [bicameral] orthographies
 * [vocab_filter.py](vocab_filter.py) - Replaces infrequent tokens with `<unk>`
-* [win1256_2_roman.tcl](win1256_2_roman.tcl) - Convert Persian Win-1256 text to transliteration.  Superseded by [Perstem] with the arguments ` --form untouched -i cp1256 -o translit`
 
 
 ## Other Useful Commands
@@ -59,7 +57,6 @@ Or you can [pipe][] these commands with other commands.
 [CoNLL-X format]: http://ilk.uvt.nl/conll/index.html#dataformat
 [Qtree]: http://www.ling.upenn.edu/advice/latex/qtree
 [Playfair]: https://en.wikipedia.org/wiki/Playfair_cipher
-[Perstem]: http://sourceforge.net/projects/perstem/
 
 [grep]: https://en.wikipedia.org/wiki/Grep
 [grep-cmd-args]: https://www.gnu.org/software/grep/manual/grep.html#Command_002dline-Options
