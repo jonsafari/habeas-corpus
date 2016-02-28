@@ -9,7 +9,7 @@ use Getopt::Long qw(:config bundling);
 
 ## Defaults
 my $n = 8;
-my ($print_stats, $min_length, $max_length) = undef;
+my ($print_stats, $min_length, $max_length, $train_stdout) = undef;
 my %stats = ('total' => 0, 'train' => 0, 'dev' => 0, 'test' => 0, 'too_short' => 0, 'too_long' => 0);
 
 my $usage = <<"END_OF_USAGE";
@@ -27,6 +27,7 @@ Options:
   -n, --number <n>     Number of lines of training text (default: $n) for
                        every one line of dev and one line of test
   -s, --stats          Print some stats to STDERR upon completion
+  -t, --train-stdout   Print training set to stdout
 
 END_OF_USAGE
 
@@ -36,13 +37,18 @@ GetOptions(
 	'M|max-length=i'   => \$max_length,
 	'n|number=i'       => \$n,
 	's|stats'          => \$print_stats,
+	't|train-stdout'   => \$train_stdout,
 
 ) or die $usage;
 
 my $basename = shift  or die "$0: Error - Specify file basename\n\n$usage";
-open ( TRAIN, ">", "${basename}.train" );
-open ( TEST,  ">", "${basename}.test_gold" );
-open ( DEV,   ">", "${basename}.dev_gold" );
+if ($train_stdout) {
+	open ( TRAIN, ">&", \*STDOUT ) or die;
+} else {
+	open ( TRAIN, ">", "${basename}.train" ) or die;
+}
+open ( TEST,  ">", "${basename}.test_gold" ) or die;
+open ( DEV,   ">", "${basename}.dev_gold" ) or die;
 
 
 my $counter;
