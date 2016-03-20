@@ -25,6 +25,7 @@ Or you can [pipe][] these commands with other commands.
 * [Tok-tok](https://github.com/jonsafari/tok-tok) - General tokenizer, suitable for many languages
 * [uppercase.pl](uppercase.pl) - Uppercases all texts.  Works on almost all [bicameral] orthographies
 * [vocab_filter.py](vocab_filter.py) - Replaces infrequent tokens with `<unk>`
+* [word2int.py](word2int.py) - Converts words to integers, online
 
 
 ## Other Useful Commands
