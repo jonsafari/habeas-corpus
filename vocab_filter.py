@@ -5,16 +5,13 @@
 # This little script is mostly for working with other people's code that doesn't handle vocab limits and/or frequency thresholds
 # Usage: python3 vocab_filter.py corpus.txt{,.gz,.xz} > corpus_with_unks.txt   (or:  ... | xz -9 > corpus_with_unks.txt.xz )
 
-import os
-import sys
-import gzip
-import lzma
-import argparse
+import os, sys, argparse
+import gzip, lzma
 parser = argparse.ArgumentParser(description='Replaces infrequent tokens with <unk>')
 
 parser.add_argument('-t', '--threshold', help='Frequency threshold (default: %(default)s)', type=int, default=3)
 parser.add_argument('-f', '--file', help='Corpus file.  Can be compressed by gzip or xz')
-parser.add_argument('-u', '--unk', help='Default unknown symbol (default: %(default)s)', default='<unk>')
+parser.add_argument('-u', '--unk', help='Default unknown symbol (default: %(default)s)', type=str, default='<unk>')
 #parser.add_argument('-v', '--vocab_size', help='Maximum vocabulary size', type=int, default=0)
 args = parser.parse_args()
 
