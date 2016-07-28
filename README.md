@@ -11,7 +11,6 @@ Or you can [pipe][] these commands with other commands.
 * [digit_conflate.pl](digit_conflate.pl) - Conflates all numerical digits to a single digit.  For example 48,250.75  -&gt; 55,555.55
 * [generate_language.sh](generate_language.sh) - Randomly generates text, given a language model and vocabulary
 * [generate_splits.pl](generate_splits.pl) - Generates train/dev/test splits from a whole corpus.  Every <i>n</i> lines goes to the training set, then one to the development set, then one to the test set
-* [get_vocab.sh](get_vocab.sh) - Lists the vocabulary (set of unique words) from a text corpus
 * [lowercase.pl](lowercase.pl) - Lowercases all texts.  Works on almost all [bicameral] orthographies
 * [mediawiki_dict.sh](mediawiki_dict.sh) - Converts [MediaWiki] [dumps] to bilingual dictionary.  You should use the wikidump from the smaller language
 * [par_map.sh](par_map.sh) - Parallel Map a command for either a single file or multiple files (i.e. parallelize a command)
@@ -24,6 +23,8 @@ Or you can [pipe][] these commands with other commands.
 * [subcorpora.pl](subcorpora.pl) - Builds subcorpora from a whole corpus, increasing in size exponentially
 * [Tok-tok](https://github.com/jonsafari/tok-tok) - General tokenizer, suitable for many languages
 * [uppercase.pl](uppercase.pl) - Uppercases all texts.  Works on almost all [bicameral] orthographies
+* [vocab.sh](vocab.sh) - Lists the vocabulary (set of unique words) from a text corpus
+* [vocab_top.sh](vocab_top.sh) - Lists a frequency-sorted vocabulary (set of unique words) from a text corpus
 * [vocab_filter.py](vocab_filter.py) - Replaces infrequent tokens with `<unk>`
 * [word2int.py](word2int.py) - Converts words to integers, online
 
