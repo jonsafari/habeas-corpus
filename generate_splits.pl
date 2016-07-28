@@ -47,8 +47,8 @@ if ($train_stdout) {
 } else {
 	open ( TRAIN, ">", "${basename}.train" ) or die;
 }
-open ( TEST,  ">", "${basename}.test_gold" ) or die;
-open ( DEV,   ">", "${basename}.dev_gold" ) or die;
+open ( TEST,  ">", "${basename}.test" ) or die;
+open ( DEV,   ">", "${basename}.dev" ) or die;
 
 
 my $counter;
