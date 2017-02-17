@@ -4,3 +4,6 @@
 [submodule "tok-tok"]
 	path = tok-tok
 	url = https://github.com/jonsafari/tok-tok
+[submodule "preprocess"]
+	path = preprocess
+	url = https://github.com/kpu/preprocess
