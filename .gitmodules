@@ -1,3 +1,6 @@
 [submodule "subword-nmt"]
 	path = subword-nmt
 	url = https://github.com/rsennrich/subword-nmt
+[submodule "tok-tok"]
+	path = tok-tok
+	url = https://github.com/jonsafari/tok-tok
