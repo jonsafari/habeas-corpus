@@ -1,6 +1,12 @@
 # Habeas Corpus
 This is a collection of **command-line corpus tools**.
-Many of these scripts have a command-line argument <tt> --help </tt> for usage information, so often you can type the following for more specific help: <pre>./myscript.sh --help</pre>
+It also includes submodules from Ken's [preprocess](https://github.com/kpu/preprocess) and Rico's [BPE](https://github.com/rsennrich/subword-nmt) repos. To include submodules when cloning, add the `--recursive` flag:
+
+```bash
+    git clone --recursive https://github.com/jonsafari/habeas-corpus
+```
+
+Many of the scripts have a command-line argument <tt> --help </tt> for usage information, so often you can type the following for more specific help: <pre>./myscript.sh --help</pre>
 Most of these scripts take their input from [stdin][], and output text to [stdout][], so the Unix command-line usage for many of these scripts is: <pre>./myscript.sh < input.txt > output.txt</pre>
 Or you can [pipe][] these commands with other commands.
 
