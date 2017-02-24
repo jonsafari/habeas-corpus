@@ -1,6 +1,6 @@
 # Habeas Corpus
 This is a collection of **command-line corpus tools**.
-It also includes submodules from Ken's [preprocess](https://github.com/kpu/preprocess) and Rico's [BPE](https://github.com/rsennrich/subword-nmt) repos. To include submodules when cloning, add the `--recursive` flag:
+For convenience it also includes submodules from Ken's [preprocess](https://github.com/kpu/preprocess) and Rico's [BPE](https://github.com/rsennrich/subword-nmt) repos. To include submodules when cloning, add the `--recursive` flag:
 
 ```bash
     git clone --recursive https://github.com/jonsafari/habeas-corpus
