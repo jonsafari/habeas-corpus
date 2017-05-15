@@ -18,27 +18,27 @@ Or you can [pipe][] these commands with other commands.
 * [par_map.sh](par_map.sh) - Parallel Map a command for either a single file or multiple files (i.e. parallelize a command)
 * [rev_words.pl](rev_words.pl) - Reverses word order in each line.  For example "how are you?" becomes "you? are how"
 * **Preprocessing**:
- * [digit_conflate.pl](digit_conflate.pl) - Conflates all numerical digits to a single digit.  For example 48,250.75  -&gt; 55,555.55
- * [lowercase.pl](lowercase.pl) - Lowercases all texts.  Works on almost all [bicameral] orthographies
- * **[Tok-tok](https://github.com/jonsafari/tok-tok)** - General tokenizer, suitable for many languages
- * [uppercase.pl](uppercase.pl) - Uppercases all texts.  Works on almost all [bicameral] orthographies
+  * [digit_conflate.pl](digit_conflate.pl) - Conflates all numerical digits to a single digit.  For example 48,250.75  -&gt; 55,555.55
+  * [lowercase.pl](lowercase.pl) - Lowercases all texts.  Works on almost all [bicameral] orthographies
+  * **[Tok-tok](https://github.com/jonsafari/tok-tok)** - General tokenizer, suitable for many languages
+  * [uppercase.pl](uppercase.pl) - Uppercases all texts.  Works on almost all [bicameral] orthographies
 * **Vocabulary extraction**:
- * [vocab.sh](vocab.sh) - Lists the vocabulary (set of unique words) from a text corpus
- * [vocab_top.sh](vocab_top.sh) - Lists a frequency-sorted vocabulary (set of unique words) from a text corpus
- * [vocab_filter.py](vocab_filter.py) - Replaces infrequent tokens with `<unk>`
- * [word2int.py](word2int.py) - Converts words to integers, online
+  * [vocab.sh](vocab.sh) - Lists the vocabulary (set of unique words) from a text corpus
+  * [vocab_top.sh](vocab_top.sh) - Lists a frequency-sorted vocabulary (set of unique words) from a text corpus
+  * [vocab_filter.py](vocab_filter.py) - Replaces infrequent tokens with `<unk>`
+  * [word2int.py](word2int.py) - Converts words to integers, online
 * **Experiment management**:
- * **[generate_splits.pl](generate_splits.pl)** - Generates train/dev/test splits from a whole corpus.  Every <i>n</i> lines goes to the training set, then one to the development set, then one to the test set
- * **[subcorpora.pl](subcorpora.pl)** - Builds subcorpora from a whole corpus, increasing in size exponentially
+  * **[generate_splits.pl](generate_splits.pl)** - Generates train/dev/test splits from a whole corpus.  Every <i>n</i> lines goes to the training set, then one to the development set, then one to the test set
+  * **[subcorpora.pl](subcorpora.pl)** - Builds subcorpora from a whole corpus, increasing in size exponentially
 * **Penn Treebank formatting**:
- * [penn2conll.sh](penn2conll.sh) - Converts [Penn treebank format] to POS-tagged [CoNLL-X format]
- * [penn2plain.pl](penn2plain.pl) - Converts Penn treebank format to plaintext
- * [penn2qtree.sh](penn2qtree.sh) - Converts Penn treebank format to [Qtree] format for use in LaTeX documents
+  * [penn2conll.sh](penn2conll.sh) - Converts [Penn treebank format] to POS-tagged [CoNLL-X format]
+  * [penn2plain.pl](penn2plain.pl) - Converts Penn treebank format to plaintext
+  * [penn2qtree.sh](penn2qtree.sh) - Converts Penn treebank format to [Qtree] format for use in LaTeX documents
 * **Character set encoding**:
- * [buckwalter2unicode.pl](buckwalter2unicode.pl) - Converts from [Buckwalter transliteration] to UTF-8 native Arabic script
+  * [buckwalter2unicode.pl](buckwalter2unicode.pl) - Converts from [Buckwalter transliteration] to UTF-8 native Arabic script
 * **Classical cryptanalysis**:
- * [pivot.pl](pivot.pl) - Rotates text by 90 degrees
- * [playfair_digraph_freq.sh](playfair_digraph_freq.sh) - Tabulates [Playfair]-style digraph character frequencies
+  * [pivot.pl](pivot.pl) - Rotates text by 90 degrees
+  * [playfair_digraph_freq.sh](playfair_digraph_freq.sh) - Tabulates [Playfair]-style digraph character frequencies
 
 
 ## Other Useful Commands
